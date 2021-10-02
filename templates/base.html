@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{{ url_for('static',filename='main.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static',filename='profile/style.css') }}">
+
+    {% block head %}{% endblock %}
+</head>
+<body class="page-top">
+<header class="header">
+    <a class="logo" href=".page-top">Task Master</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li><a id="nav" href="{{ url_for('hello_world') }}" class="link link-theme link-arrow">HOME</a></li>
+        <li><a id="nav" href="{{ url_for('user_login') }}" class="link link-theme link-arrow">Login</a></li>
+        <li><a id="nav" href="{{ url_for('user_signup') }}" class="link link-theme link-arrow">Sign Up</a></li>
+    </ul>
+</header>
+<div>
+
+    <div id="main" class="main">
+
+        <section class="intro">
+
+
+
+                {% block body %}{% endblock %}
+
+
+        </section>
+
+
+    </div>
+
+
+</div>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="{{ url_for('static',filename='profile/script.js') }}"></script>
+
+</body>
+</html>

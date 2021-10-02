@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='profile/style.css') }}">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<html>
+
+<body class="page-top">
+
+<header class="header">
+    <a class="logo" href=".page-top">PixelStretch</a>
+    <input class="menu-btn" type="checkbox" id="menu-btn"/>
+    <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+    <ul class="menu">
+        <li><a href="{{ url_for('hello_world') }}" class="link link-theme link-arrow">Task</a></li>
+        <li><a href="{{ url_for('logout') }}" class="link link-theme link-arrow">Logout</a></li>
+    </ul>
+</header>
+
+<div>
+
+    <div id="main" class="main">
+
+        <section class="intro">
+
+            <article class="container">
+
+                <h1>
+                    Front-end <strong>Development</strong>
+                </h1>
+
+            </article>
+
+        </section>
+
+
+    </div>
+
+
+</div>
+<!-- end div container -->
+</body>
+
+</html>
+<!-- partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+<script src="{{ url_for('static',filename='profile/script.js') }}"></script>
+
+</body>
+</html>
